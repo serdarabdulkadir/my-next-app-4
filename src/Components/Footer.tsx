@@ -1,93 +1,111 @@
+"use client";
 import Link from "next/link";
+// React'ta ikonları kolayca kullanabilmek için react-icons kütüphanesini varsayıyorum.
+// Eğer yüklü değilse: npm install react-icons
 
-export default function FooterPage() {
+export default function Footer() {
+  // Tasarımdaki renkler:
+  const darkBg = "#191A23"; // Ana koyu arka plan
+  const lightGreen = "#C9FF5E"; // Yeşil vurgu rengi
+  const whiteText = "white"; 
+
   return (
-    <footer className="bg-[#191919] text-white rounded-t-3xl py-12 px-6 md:px-16 lg:px-28">
-      <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-16">
-        {/* Sol Kısım */}
-        <div className="flex flex-col gap-6 md:w-1/2">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <img
-              src="/Icon1.svg"
-              alt="Positivus Logo"
-              width={28}
-              height={28}
-              className="object-contain"
-            />
-            <span className="text-xl font-semibold">Positivus</span>
-          </div>
-
-          {/* Menü */}
-          <nav className="flex flex-wrap gap-4 text-gray-300 text-sm">
-            <Link href="#" className="hover:text-[#D1FF4C]">
-              About us
-            </Link>
-            <Link href="#" className="hover:text-[#D1FF4C]">
-              Services
-            </Link>
-            <Link href="#" className="hover:text-[#D1FF4C]">
-              Use Cases
-            </Link>
-            <Link href="#" className="hover:text-[#D1FF4C]">
-              Pricing
-            </Link>
-            <Link href="#" className="hover:text-[#D1FF4C]">
-              Blog
-            </Link>
-          </nav>
-
-          {/* Contact */}
-          <div className="bg-[#292929] rounded-3xl p-6 flex flex-col gap-3">
-            <span className="bg-[#D1FF4C] text-black text-sm font-semibold px-3 py-1 rounded-md w-fit">
-              Contact us:
-            </span>
-            <p className="text-sm text-gray-200">
-              Email: info@positivus.com
-              <br />
-              Phone: 555-567-8901
-              <br />
-              Address: 1234 Main St, Moonstone City, Stardust State 12345
-            </p>
-          </div>
+    // Ana konteyner: Koyu arka plan ve yuvarlatılmış köşeler
+    <footer className={`bg-[${darkBg}] px-6 md:px-20 py-16 text-${whiteText} rounded-t-[40px] font-[Space_Grotesk]`}>
+      {/* Üst Bölüm: Logo, Menü, Sosyal Medya */}
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+        {/* Sol: Logo */}
+        <div className="flex items-center space-x-2 mb-6 md:mb-0">
+          {/* Logo İkonu (Bir X veya yıldız şekli, burada basit bir yer tutucu kullanıyorum) */}
+          <img src="/Icon1.svg" alt="" />
+         
+          <span className="text-xl font-bold">Positivus</span>
         </div>
 
-        {/* Sağ Kısım */}
-        <div className="flex flex-col justify-between md:w-1/2">
-          {/* Sosyal ikonlar */}
-          <div className="flex justify-end gap-3 mb-6 md:mb-0">
-            <Link href="#" className="rounded-full p-2 hover:bg-[#D1FF4C] transition">
-              <img src="/Linkedin.svg" alt="LinkedIn" width={18} height={18} />
-            </Link>
+        {/* Orta: Menü Bağlantıları */}
+        <nav className="flex flex-wrap gap-x-8 gap-y-4 text-base font-medium text-white/80 underline-offset-4 mb-6 md:mb-0">
+          {/* !!! Burası Değişti: linklere "duration-500" eklendi !!! */}
+          <Link href="#About" className="hover:text-gray-600 transition-colors **duration-500**">
+            About us
+          </Link>
+          <Link href="#Services" className="hover:text-gray-600 transition-colors **duration-500**">
+            Services
+          </Link>
+          <Link href="#Working" className="hover:text-gray-600 transition-colors **duration-500**">
+            Use Cases
+          </Link>
+          <Link href="#Team" className="hover:text-gray-600 transition-colors **duration-500**">
+            Pricing
+          </Link>
+          <Link href="#Test" className="hover:text-gray-600 transition-colors **duration-500**">
+            Blog
+          </Link>
+        </nav>
 
-            <Link href="#" className="rounded-full p-2 hover:bg-[#D1FF4C] transition">
-              <img src="/Facebook.svg" alt="Facebook" width={18} height={18} />
-            </Link>
-
-            <Link href="#" className=" rounded-full p-2 hover:bg-[#D1FF4C] transition">
-              <img src="/X.svg" alt="Twitter (X)" width={18} height={18} />
-            </Link>
-
-          </div>
-
-          {/* Subscribe Alanı */}
-          <div className="bg-[#292929] rounded-3xl p-6 flex flex-col sm:flex-row items-center gap-4">
+        {/* Sağ: Sosyal Medya İkonları */}
+        <div className="flex space-x-4">
+          <Link href="#" aria-label="LinkedIn">
+            <div className={`w-8 h-8 rounded-full bg-white flex items-center justify-center text-[${darkBg}] hover:opacity-80 transition`}>
+              <img src="/Linkedin.svg" alt="" />
+            </div>
+          </Link>
+          <Link href="#" aria-label="Facebook">
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[${darkBg}] hover:opacity-80 transition`}>
+              <img src="/Facebook.svg" alt="" />
+            </div>
+          </Link>
+          <Link href="#" aria-label="Twitter">
+            <div className={`w-8 h-8 rounded-full bg-white flex items-center justify-center text-[${darkBg}] hover:opacity-80 transition`}>
+              <img src="/X.svg" alt="" />
+            </div>
+          </Link>
+        </div>
+      </div>
+      
+      {/* Ana İçerik ve Abonelik Formu */}
+      <div className="flex flex-col lg:flex-row justify-between pt-8 pb-12">
+        {/* Sol: İletişim Bilgileri */}
+        <div className="flex flex-col space-y-3 mb-10 lg:mb-0 w-full lg:max-w-[400px]">
+          {/* İletişim Başlığı */}
+          <h3 className={`text-[18px] font-semibold text-black bg-[${lightGreen}] px-3 py-1 rounded-md shadow-[0_2px_0_#000] inline-block w-fit`}>
+            Contact us:
+          </h3>
+          
+          {/* Bilgiler */}
+          <p className="text-base text-white/80 mt-4">Email: **info@positivus.com**</p>
+          <p className="text-base text-white/80">Phone: **555-567-8901**</p>
+          <p className="text-base text-white/80">
+            Address: **1234 Main St** <br /> Moonstone City, Stardust State 12345
+          </p>
+        </div>
+        
+        {/* Sağ: Abonelik Formu */}
+        <div className={`bg-[#292A32] p-12 rounded-[25px] flex items-center justify-center w-full lg:max-w-[500px] h-fit`}>
+          <div className="flex flex-col sm:flex-row gap-4 w-full">
             <input
               type="email"
               placeholder="Email"
-              className="flex-1 w-full rounded-md border border-gray-500 bg-transparent px-4 py-3 text-sm text-white placeholder-gray-400 focus:outline-none"
+              className={`flex-grow bg-transparent border-b-2 border-white/80 text-white placeholder-white/50 px-3 py-2 text-[16px] outline-none focus:border-[${lightGreen}] transition`}
             />
-            <button className="bg-[#D1FF4C] text-black px-6 py-3 rounded-md font-medium text-sm hover:brightness-110 transition">
+            <button
+              type="submit"
+              className={`bg-[${lightGreen}] text-[${darkBg}] text-[16px] font-medium px-6 py-3 rounded-xl hover:opacity-90 transition-all duration-200 whitespace-nowrap`}
+            >
               Subscribe to news
             </button>
           </div>
         </div>
       </div>
 
-      {/* Alt Bilgi */}
-      <div className="border-t border-gray-600 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-        <p>© 2023 Positivus. All Rights Reserved.</p>
-        <Link href="#" className="hover:text-[#D1FF4C]">
+      {/* Ayırıcı Çizgi */}
+      <hr className="border-t border-white/20 mb-6" />
+
+      {/* Alt Bölüm: Telif Hakkı ve Gizlilik Politikası */}
+      <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-white/70">
+        <p className="mb-2 sm:mb-0">
+          © 2023 Positivus. All Rights Reserved.
+        </p>
+        <Link href="/privacy" className="underline hover:text-white transition">
           Privacy Policy
         </Link>
       </div>

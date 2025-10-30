@@ -5,12 +5,12 @@ export default function Hero() {
 
 
   return (
-    <section className="bg-white w-full flex flex-col lg:flex-row items-center justify-between px-8 lg:px-24 py-20">
+    <section className="bg-white w-full flex flex-col lg:flex-row items-center justify-between px-8 lg:px-24 py-20"
+          style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
       {/* Sol Metin Bloğu */}
       <div className="max-w-xl">
         <h1
           className="text-[58px] leading-[68px] font-medium text-[#191A23] mb-8 tracking-tight"
-          style={{ fontFamily: '"Space Grotesk", sans-serif' }}
         >
           Navigating the <br /> digital landscape <br /> for success
         </h1>

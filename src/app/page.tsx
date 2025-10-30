@@ -11,7 +11,7 @@ import Footer from "@/Components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full overflow-x-hidden bg-white font-[family-name:var(--font-geist-sans)]">
+    <main className="flex flex-col items-center w-full overflow-x-hidden bg-white font-[family-name:var(--font-geist-sans)]" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
       {/* Navbar */}
       <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20">
         <Navbar />
@@ -58,8 +58,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full mt-20 sm:mt-28 bg-[#111111] text-white">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-12">
+      <footer className="w-full mt-20 sm:mt-28 ">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 pt-12">
           <Footer />
         </div>
       </footer>
