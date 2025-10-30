@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // SVG'nin kendisi (koyu arka plan, kartlar ve kuyruklar) bu dosyanın yerine geçecek.
 // SVG dosyanızı projenizin 'public' klasörüne kaydedin.
