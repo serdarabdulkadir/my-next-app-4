@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { Linkedin } from "lucide-react";
 
 const team = [
   {
