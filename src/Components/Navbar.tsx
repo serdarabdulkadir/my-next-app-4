@@ -15,7 +15,7 @@ export default function Navbar() {
 
       {/* Menü */}
       <div className="flex items-center space-x-12 text-[18px] text-black">
-        <Link href="#" className="hover:text-gray-600 transition-colors">
+        <Link href="#About" className="hover:text-gray-600 transition-colors">
           About us
         </Link>
         <Link href="#" className="hover:text-gray-600 transition-colors">

@@ -18,7 +18,7 @@ export default function Home() {
       </section>
 
       {/* Hero */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-8 sm:mt-12">
+      <section id="Hero" className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-8 sm:mt-12">
         <Hero />
       </section>
 
@@ -28,32 +28,32 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-24">
+      <section id="About" className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-24">
         <AboutPage />
       </section>
 
       {/* Services */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
+      <section id="Services" className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
         <ServicesPage />
       </section>
 
       {/* Working Process */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
+      <section id="Working" className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
         <WorkingProcess />
       </section>
 
       {/* Team */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
+      <section id="Team" className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
         <TeamSection />
       </section>
 
       {/* Testimonials */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
+      <section id="Test" className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
         <Testimonials />
       </section>
 
       {/* Contact */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
+      <section id="Contact" className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-28">
         <Contact />
       </section>
 
