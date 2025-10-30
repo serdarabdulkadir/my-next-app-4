@@ -18,16 +18,16 @@ export default function Navbar() {
         <Link href="#About" className="hover:text-gray-600 transition-colors">
           About us
         </Link>
-        <Link href="#" className="hover:text-gray-600 transition-colors">
+        <Link href="#Services" className="hover:text-gray-600 transition-colors">
           Services
         </Link>
-        <Link href="#" className="hover:text-gray-600 transition-colors">
+        <Link href="#Working" className="hover:text-gray-600 transition-colors">
           Use Cases
         </Link>
-        <Link href="#" className="hover:text-gray-600 transition-colors">
+        <Link href="#Team" className="hover:text-gray-600 transition-colors">
           Pricing
         </Link>
-        <Link href="#" className="hover:text-gray-600 transition-colors">
+        <Link href="#Test" className="hover:text-gray-600 transition-colors">
           Blog
         </Link>
       </div>
