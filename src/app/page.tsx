@@ -23,7 +23,7 @@ export default function Home() {
       </section>
 
       {/* Partners */}
-      <section className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-20 mt-12 sm:mt-20">
+      <section className="w-full max-w-full px-4 sm:px-2 md:px-8 lg:px-10 mt-12 sm:mt-20">
         <Partners />
       </section>
 

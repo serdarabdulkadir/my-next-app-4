@@ -26,7 +26,7 @@ export default function Contact() {
     
       {/* Form Ana Konteyneri */}
       {/* Arka plan rengi, gölge ve köşeler tasarım ile eşleşmeli */}
-      <div className="relative bg-[#F3F3F3] rounded-[30px] shadow-[0_4px_0_#191A23] px-8 md:px-16 py-12 flex flex-col md:flex-row justify-between overflow-hidden">
+      <div className="relative bg-[#F3F3F3] rounded-[30px]  px-8 md:px-16 py-12 flex flex-col md:flex-row justify-between overflow-hidden">
         {/* Sol Taraftaki Form Alanı */}
         <form className="flex flex-col gap-6 w-full md:max-w-[500px] z-20"> {/* Max genişlik ayarlandı */}
           {/* Radyo Butonları */}

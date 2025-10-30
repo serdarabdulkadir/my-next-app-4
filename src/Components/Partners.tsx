@@ -10,7 +10,7 @@ export default function Partners() {
   ];
 
   return (
-    <section className="flex flex-wrap items-center justify-center gap-12 py-12 bg-white">
+    <section className="flex flex-wrap items-center justify-center gap-20 py-12 bg-white">
       {logos.map((logo) => (
         <img
           key={logo.alt}
