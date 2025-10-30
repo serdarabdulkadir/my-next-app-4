@@ -34,6 +34,9 @@ export default function Navbar() {
       });
     });
   }, []);
+  
+  // Mobil menüyü kapatma fonksiyonu
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav
@@ -42,7 +45,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-20">
-        {/* Sol Logo */}
+        {/* Sol Logo - Desktop ve Mobile (Kapalıyken) */}
         <div className="flex items-center space-x-3">
           <img src="./Icon.svg" alt="logo" className="w-6 h-6" />
           <span className="text-[22px] font-semibold text-black tracking-tight">
@@ -74,7 +77,7 @@ export default function Navbar() {
           Request a quote
         </button>
 
-        {/* Hamburger Menü (Mobile) */}
+        {/* Hamburger Menü (Mobile - Kapalıyken) */}
         <button
           className="md:hidden text-black"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -83,30 +86,53 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobil Menü */}
+      {/* Mobil Menü - Açıkken Header'ı İçerecek Şekilde Güncellendi */}
       <div
-        className={`fixed top-0 left-0 h-screen w-full bg-white flex flex-col items-start justify-start px-8 pt-24 space-y-6 text-[22px] text-black transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 h-screen w-full bg-white flex flex-col transition-transform duration-500 ease-in-out z-50 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <Link href="#About" className="hover:text-gray-600" onClick={() => setMenuOpen(false)}>
-          About us
-        </Link>
-        <Link href="#Services" className="hover:text-gray-600" onClick={() => setMenuOpen(false)}>
-          Services
-        </Link>
-        <Link href="#Working" className="hover:text-gray-600" onClick={() => setMenuOpen(false)}>
-          Use Cases
-        </Link>
-        <Link href="#Team" className="hover:text-gray-600" onClick={() => setMenuOpen(false)}>
-          Pricing
-        </Link>
-        <Link href="#Test" className="hover:text-gray-600" onClick={() => setMenuOpen(false)}>
-          Blog
-        </Link>
-        <button className="border border-black text-[18px] text-black px-8 py-3 rounded-2xl hover:bg-black hover:text-white transition-all duration-200">
-          Request a quote
-        </button>
+        {/* YENİ: Mobil Menü Açıkken Görünen Header/Navigasyon Barı */}
+        {/* Bu kısım, ana navigasyon çubuğunun yüksekliğini ve stilini taklit etmelidir. */}
+        <div className="w-full flex items-center justify-between px-6 md:px-20 py-6 border-b border-gray-200">
+            {/* Sol Logo */}
+            <div className="flex items-center space-x-3">
+                <img src="./Icon.svg" alt="logo" className="w-6 h-6" />
+                <span className="text-[22px] font-semibold text-black tracking-tight">
+                    Positivus
+                </span>
+            </div>
+
+            {/* Sağ Kapatma Butonu (X) */}
+            <button
+                className="text-black"
+                onClick={closeMenu}
+            >
+                <X size={28} />
+            </button>
+        </div>
+
+        {/* Mobil Menü Linkleri ve Butonu */}
+        <div className="flex flex-col items-start px-8 pt-10 space-y-6 text-[22px] text-black">
+            <Link href="#About" className="hover:text-gray-600" onClick={closeMenu}>
+                About us
+            </Link>
+            <Link href="#Services" className="hover:text-gray-600" onClick={closeMenu}>
+                Services
+            </Link>
+            <Link href="#Working" className="hover:text-gray-600" onClick={closeMenu}>
+                Use Cases
+            </Link>
+            <Link href="#Team" className="hover:text-gray-600" onClick={closeMenu}>
+                Pricing
+            </Link>
+            <Link href="#Test" className="hover:text-gray-600" onClick={closeMenu}>
+                Blog
+            </Link>
+            <button className="border border-black text-[18px] text-black px-8 py-3 rounded-2xl hover:bg-black hover:text-white transition-all duration-200 mt-6">
+                Request a quote
+            </button>
+        </div>
       </div>
     </nav>
   );
