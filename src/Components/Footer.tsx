@@ -25,19 +25,19 @@ export default function Footer() {
         {/* Orta: Menü Bağlantıları */}
         <nav className="flex flex-wrap gap-x-8 gap-y-4 text-base font-medium text-white/80 underline-offset-4 mb-6 md:mb-0">
           {/* !!! Burası Değişti: linklere "duration-500" eklendi !!! */}
-          <Link href="#About" className="hover:text-gray-600 transition-colors **duration-500**">
+          <Link href="#About" className="hover:text-gray-600 transition-colors **duration-500** underline">
             About us
           </Link>
-          <Link href="#Services" className="hover:text-gray-600 transition-colors **duration-500**">
+          <Link href="#Services" className="hover:text-gray-600 transition-colors **duration-500** underline">
             Services
           </Link>
-          <Link href="#Working" className="hover:text-gray-600 transition-colors **duration-500**">
+          <Link href="#Working" className="hover:text-gray-600 transition-colors **duration-500** underline">
             Use Cases
           </Link>
-          <Link href="#Team" className="hover:text-gray-600 transition-colors **duration-500**">
+          <Link href="#Team" className="hover:text-gray-600 transition-colors **duration-500** underline">
             Pricing
           </Link>
-          <Link href="#Test" className="hover:text-gray-600 transition-colors **duration-500**">
+          <Link href="#Test" className="hover:text-gray-600 transition-colors duration-500 underline">
             Blog
           </Link>
         </nav>
@@ -72,10 +72,10 @@ export default function Footer() {
           </h3>
           
           {/* Bilgiler */}
-          <p className="text-base text-white/80 mt-4">Email: **info@positivus.com**</p>
-          <p className="text-base text-white/80">Phone: **555-567-8901**</p>
+          <p className="text-base text-white/80 mt-4">Email: info@positivus.com</p>
+          <p className="text-base text-white/80">Phone: 555-567-8901</p>
           <p className="text-base text-white/80">
-            Address: **1234 Main St** <br /> Moonstone City, Stardust State 12345
+            Address: 1234 Main St <br /> Moonstone City, Stardust State 12345
           </p>
         </div>
         
@@ -85,7 +85,7 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Email"
-              className={`flex-grow bg-transparent border-b-2 border-white/80 text-white placeholder-white/50 px-3 py-2 text-[16px] outline-none focus:border-[${lightGreen}] transition`}
+              className={`flex-grow bg-transparent border-2 border-white/80 rounded-xl text-white placeholder-white/50 px-3 py-2 text-[16px] outline-none focus:border-[${lightGreen}] transition`}
             />
             <button
               type="submit"
